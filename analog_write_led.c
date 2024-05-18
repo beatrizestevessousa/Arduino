@@ -1,7 +1,7 @@
 int redPin = 9;
 int bright = 255;
 
-void setup() {s
+void setup() {
   pinMode(redPin, OUTPUT);
 }
 
