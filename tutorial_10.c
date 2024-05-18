@@ -1,5 +1,7 @@
+// Set up variables
 int readPin = A3;
-int V2 = 0;
+int readVal;
+float V2 = 0;
 int delayTime = 500;
 
 void setup()
@@ -10,7 +12,8 @@ void setup()
 
 void loop()
 {
-  V2 = analogRead(readPin);
+  readVal = analogRead(readPin); // Reads voltage (analog pin)
+  V2 = (5./1023.) * readVal; // Convert to actual voltage
   Serial.println(V2);
   delay(delayTime);
 }
